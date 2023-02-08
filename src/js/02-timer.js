@@ -8,7 +8,6 @@ const minutesTimer = document.querySelector('[data-minutes]');
 const secondsTimer = document.querySelector('[data-seconds]');
 let endOfTimer;
 let intervalId;
-// let intervalId = setInterval(backTimer, 1000);
 
 const settingsDate = {
   enableTime: true,
