@@ -7,6 +7,7 @@ const hoursTimer = document.querySelector('[data-hours]');
 const minutesTimer = document.querySelector('[data-minutes]');
 const secondsTimer = document.querySelector('[data-seconds]');
 let endOfTimer;
+let intervalId;
 // let intervalId = setInterval(backTimer, 1000);
 
 const settingsDate = {
@@ -46,7 +47,7 @@ function backTimer() {
     let timeObject = convertMs(diffTime);
     console.log(timeObject);
     const { days, hours, minutes, seconds } = timeObject;
-    daysTimer.textContent = days;
+    daysTimer.textContent = addLeadingZero(days);
     hoursTimer.textContent = addLeadingZero(hours);
     minutesTimer.textContent = addLeadingZero(minutes);
     secondsTimer.textContent = addLeadingZero(seconds);
